@@ -8,5 +8,17 @@
 #ifndef Ship_h
 #define Ship_h
 
+#include "Actor.h"
+
+class Ship : public Actor {
+public:
+    Ship(class Game* pGame);
+    void Update(float deltaTime);
+    void ProcessInput(const uint8_t* keyboardState);
+
+private:
+    int laserCoolDown;
+};
+
 
 #endif /* Ship_h */
